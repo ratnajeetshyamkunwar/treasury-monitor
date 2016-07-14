@@ -30,7 +30,7 @@
 		padding: 15px;
 	}
 	@media only print{
-		.nav, .printButton { display: none; }
+		.nav, .btn-print { display: none; }
 	}
 </style>
 </head>
@@ -99,7 +99,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="printButton navbar-right" style="margin-top: 50px;">
+		<div class="btn-print navbar-right" style="margin-top: 50px;">
 			<button class="btn btn-primary" onclick="printPages()"><span class="glyphicon glyphicon-print"> </span> Print</button>
 		</div>
 	</div>
