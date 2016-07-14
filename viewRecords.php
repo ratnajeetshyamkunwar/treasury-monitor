@@ -29,6 +29,9 @@
 	th, td {
 		padding: 15px;
 	}
+	@media only print{
+		.nav, .printButton { display: none; }
+	}
 </style>
 </head>
 <body>
@@ -95,7 +98,15 @@
 					?>
 				</tbody>
 			</table>
-		</div>	
+		</div>
+		<div class="printButton navbar-right" style="margin-top: 50px;">
+			<button class="btn btn-primary" onclick="printPages()"><span class="glyphicon glyphicon-print"> </span> Print</button>
+		</div>
 	</div>
+	<script>
+		function printPages(){
+			window.print();
+		}
+	</script>
 </body>
 </html>
