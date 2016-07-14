@@ -16,7 +16,7 @@
 		font-size: 20px;
 		}
 	@media only print {
-		.nav, .nav-pills { display:none;}
+		.nav, .nav-pills, .btn-print { display:none;}
 	}
 </style>
 </head>
@@ -211,9 +211,8 @@
 			</div>
 		</div>
 		</div>
-		<div>
-			<p>Click on this button to print this page</p>
-			<button onclick="printFunction()">Print</button>
+		<div class="btn-print navbar-right">
+			<button class="btn btn-primary" onclick="printFunction()"><span class="glyphicon glyphicon-print"> </span> PRINT</button>
 		</div>
 	</div>
 	<script>
