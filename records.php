@@ -30,6 +30,9 @@
 	th, td {
 		padding: 15px;
 	}
+	@media only print{
+		.nav, .btn-print, .action, #col-action { display: none; }
+	}
 </style>
 </head>
 <body>
@@ -64,7 +67,7 @@
 						<th class="col-sm-2">Date</th>
 						<th class="col-sm-1">Shera</th>
 						<th class="col-sm-1">Status</th>
-						<th class="col-sm-1">Action</th>
+						<th class="col-sm-1" id="col-action">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -89,7 +92,7 @@
 								echo "<td id='dataDate'>".$row['date'];
 								echo "<td id='dataShera'>".$row['shera'];
 								echo "<td id='dataStatus'>".$row['status'];
-								echo '<td><a href="clerkUpdate.php?serialNum='.$serialNum.'" class="btn btn-success" >Update</a></td>';
+								echo '<td class="action"><a href="clerkUpdate.php?serialNum='.$serialNum.'" class="btn btn-success" >Update</a></td>';
 								echo "</tr>";
 							}
 							$conn -> close();
@@ -98,7 +101,15 @@
 					?>
 				</tbody>
 			</table>
+			<div class="btn-print navbar-right" style="margin-top: 50px;">
+				<button class="btn btn-primary" onclick="printPages()"><span class="glyphicon glyphicon-print"> </span> PRINT</button>
+			</div>
 		</div>	
 	</div>
+	<script>
+		function printPages(){
+			window.print();
+		}
+	</script>
 </body>
 </html>

@@ -30,6 +30,9 @@
 	th, td {
 		padding: 15px;
 	}
+	@media only print {
+		.nav, .btn-print, .action, #col-action { display: none; }
+	}
 
 </style>
 </head>
@@ -67,7 +70,7 @@
 						<th class="col-sm-1">Outward Checking No.</th>
 						<th class="col-sm-1">Classification</th>
 						<th class="col-sm-1">Shera</th>
-						<th class="col-sm-1">Action</th>
+						<th class="col-sm-1" id="col-action">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -95,7 +98,7 @@
 								echo "<td>" .$row['checkNum'];
 								echo "<td>" .$row['classification'];
 								echo "<td>" .$row['shera'];
-								echo '<td><a href="mailUpdate.php?serialNum='.$serialNum.'" class="btn btn-success" >Update</a></td>';
+								echo '<td class="action"><a href="mailUpdate.php?serialNum='.$serialNum.'" class="btn btn-success" >Update</a></td>';
 								echo "</tr>";
 							}
 							
@@ -104,7 +107,15 @@
 					?>
 				</tbody>
 			</table>
-		</div>	
+		</div>
+		<div class="btn-print navbar-right" style="margin-top: 50px;">
+			<button class="btn btn-primary" onclick="printPages()"><span class="glyphicon glyphicon-print"> </span> PRINT</button>
+		</div>
 	</div>
+	<script>
+		function printPages(){
+			window.print();
+		}
+	</script>
 </body>
 </html>
