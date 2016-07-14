@@ -100,7 +100,7 @@
 			</table>
 		</div>
 		<div class="btn-print navbar-right" style="margin-top: 50px;">
-			<button class="btn btn-primary" onclick="printPages()"><span class="glyphicon glyphicon-print"> </span> Print</button>
+			<button class="btn btn-primary" onclick="printPages()"><span class="glyphicon glyphicon-print"> </span> PRINT</button>
 		</div>
 	</div>
 	<script>
